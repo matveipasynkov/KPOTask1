@@ -16,3 +16,4 @@
 /Users/matveipasynkov/Desktop/Matthew/KPOTask1/KPOTask1/obj/Debug/net9.0/KPOTask1.pdb
 /Users/matveipasynkov/Desktop/Matthew/KPOTask1/KPOTask1/obj/Debug/net9.0/KPOTask1.genruntimeconfig.cache
 /Users/matveipasynkov/Desktop/Matthew/KPOTask1/KPOTask1/obj/Debug/net9.0/ref/KPOTask1.dll
+/Users/matveipasynkov/Desktop/Matthew/KPOTask1/KPOTask1/obj/Debug/net9.0/KPOTask1.sourcelink.json

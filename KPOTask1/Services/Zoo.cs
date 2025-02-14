@@ -4,56 +4,74 @@ using Models.Animals;
 using Models.Things;
 using Interfaces;
 
-public class Zoo
+class Zoo
 {
-    private List<IInventory> inventory = new();
+    private List<Animal> animals = new List<Animal>();
+    private List<Thing> inventory = new List<Thing>();
     private VeterinaryClinic clinic;
-    
+
     public Zoo(VeterinaryClinic clinic)
     {
         this.clinic = clinic;
     }
-    
+
     public void AddAnimal(Animal animal)
     {
         if (clinic.CheckHealth(animal))
         {
-            inventory.Add(animal);
-            Console.WriteLine($"{animal.Name} принят в зоопарк!");
+            animals.Add(animal);
+            Console.WriteLine($"{animal.Name} добавлено в зоопарк.");
         }
         else
         {
-            Console.WriteLine($"{animal.Name} не прошел проверку здоровья!");
+            Console.WriteLine($"{animal.Name} не прошло проверку здоровья.");
         }
     }
-    
+
     public void AddThing(Thing thing)
     {
         inventory.Add(thing);
+        Console.WriteLine($"{thing.Name} добавлено в инвентарь.");
     }
-    
-    public void PrintReport()
+
+    public void ListAnimals()
     {
-        int totalFood = inventory.OfType<IAlive>().Sum(a => a.Food);
-        Console.WriteLine($"Всего животных: {inventory.OfType<Animal>().Count()} \nПотребление еды: {totalFood} кг/день");
-    }
-    
-    public void ListInteractiveAnimals()
-    {
-        var interactive = inventory.OfType<Herbo>().Where(h => h.Kindness > 5);
-        Console.WriteLine("Животные для контактного зоопарка:");
-        foreach (var animal in interactive)
+        foreach (var animal in animals)
         {
-            Console.WriteLine(animal.Name);
+            Console.WriteLine($"{animal.Name} - {animal.Food} кг еды/сутки");
         }
     }
-    
-    public void ListInventory()
+
+    public void FoodReport()
     {
-        Console.WriteLine("Инвентаризация зоопарка:");
-        foreach (var item in inventory)
+        int totalFood = 0;
+        foreach (var animal in animals)
         {
-            Console.WriteLine($"{item.GetType().Name} - Инв. номер: {item.Number}");
+            totalFood += animal.Food;
+        }
+        Console.WriteLine($"Общее потребление пищи: {totalFood} кг/сутки");
+    }
+
+    public void ContactZooAnimals()
+    {
+        foreach (var animal in animals)
+        {
+            if (animal is Herbo herbo && herbo.Kindness > 5)
+            {
+                Console.WriteLine($"{animal.Name} может участвовать в контактном зоопарке");
+            }
+        }
+    }
+
+    public void InventoryReport()
+    {
+        foreach (var thing in inventory)
+        {
+            Console.WriteLine($"{thing.Name} - Инвентарный номер: {thing.Number}");
+        }
+        foreach (var animal in animals)
+        {
+            Console.WriteLine($"{animal.Name} - Инвентарный номер: {animal.Number}");
         }
     }
 }

@@ -2,16 +2,10 @@ namespace Models.Animals;
 
 using Interfaces;
 
-public abstract class Animal : IAlive, IInventory
+abstract class Animal : IAlive, IInventory
 {
-    public int Food { get; protected set; }
-    public int Number { get; }
-    public string Name { get; }
-
-    protected Animal(string name, int number, int food)
-    {
-        Name = name;
-        Number = number;
-        Food = food;
-    }
+    public required string? Name { get; set; }
+    public int Food { get; set; }
+    public int Number { get; set; }
+    public bool IsHealthy { get; set; }
 }
