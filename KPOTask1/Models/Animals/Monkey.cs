@@ -1,3 +1,3 @@
 namespace Models.Animals;
 
-class Monkey : Herbo { }
+public class Monkey : Herbo { }

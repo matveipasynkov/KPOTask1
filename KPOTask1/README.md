@@ -56,3 +56,5 @@
 - **L (Liskov Substitution Principle)** – подклассы (**Monkey**, **Tiger**, **Rabbit**) могут заменять базовый **Animal** без изменения логики.
 - **I (Interface Segregation Principle)** – **IAlive** и **IInventory** разделяют интерфейсы, чтобы классы не реализовывали ненужные методы.
 - **D (Dependency Inversion Principle)** – **Zoo** получает **VeterinaryClinic** через DI-контейнер, а не создает его напрямую.
+
+### Также добавлено Unit-тестирование в KPOTask1Test.

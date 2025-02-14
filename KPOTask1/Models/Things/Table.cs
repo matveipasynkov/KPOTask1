@@ -1,3 +1,3 @@
 namespace Models.Things;
 
-class Table : Thing { }
+public class Table : Thing { }

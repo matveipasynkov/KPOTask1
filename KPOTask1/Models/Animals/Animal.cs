@@ -2,7 +2,7 @@ namespace Models.Animals;
 
 using Interfaces;
 
-abstract class Animal : IAlive, IInventory
+public abstract class Animal : IAlive, IInventory
 {
     public required string? Name { get; set; }
     public int Food { get; set; }

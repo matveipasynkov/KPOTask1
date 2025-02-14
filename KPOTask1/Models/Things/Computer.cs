@@ -1,3 +1,3 @@
 namespace Models.Things;
 
-class Computer : Thing { }
+public class Computer : Thing { }

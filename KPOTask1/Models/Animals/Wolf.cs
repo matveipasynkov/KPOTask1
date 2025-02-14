@@ -1,3 +1,3 @@
 namespace Models.Animals;
 
-class Wolf : Predator { }
+public class Wolf : Predator { }

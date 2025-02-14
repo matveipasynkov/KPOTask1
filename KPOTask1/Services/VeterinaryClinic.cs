@@ -1,7 +1,7 @@
 namespace Services;
 
 using Models.Animals;
-class VeterinaryClinic
+public class VeterinaryClinic
 {
     public bool CheckHealth(Animal animal)
     {

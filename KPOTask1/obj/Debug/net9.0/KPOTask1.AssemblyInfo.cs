@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KPOTask1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2a1c4f1ef900237080cd2884de4aeb66a5f567b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f1e96d1eb5bce32617f62326801cfdddfec5688")]
 [assembly: System.Reflection.AssemblyProductAttribute("KPOTask1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KPOTask1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

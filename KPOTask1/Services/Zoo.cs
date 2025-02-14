@@ -4,7 +4,7 @@ using Models.Animals;
 using Models.Things;
 using Interfaces;
 
-class Zoo
+public class Zoo
 {
     private List<Animal> animals = new List<Animal>();
     private List<Thing> inventory = new List<Thing>();
@@ -40,6 +40,23 @@ class Zoo
         {
             Console.WriteLine($"{animal.Name} - {animal.Food} кг еды/сутки");
         }
+    }
+
+    public List<Animal> GetAnimals() {
+        return new List<Animal>(animals);
+    }
+
+    public List<Thing> GetInventory() {
+        return new List<Thing>(inventory);
+    }
+
+    public int GetTotalFoodConsumption() {
+        int totalFood = 0;
+        foreach (var animal in animals)
+        {
+            totalFood += animal.Food;
+        }
+        return totalFood;
     }
 
     public void FoodReport()
