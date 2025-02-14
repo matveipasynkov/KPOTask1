@@ -44,3 +44,13 @@
    - **PrintReport()** – вывести отчет по количеству животных и потребляемой еде.
    - **ListInteractiveAnimals()** – вывести список животных, доступных для контактного зоопарка.
    - **ListInventory()** – вывести список всех инвентарных предметов и животных с их номерами.
+
+**2. Инициализация работы**
+Работа приложения запускается только после инициализации всех последующих компонент:
+```
+var services = new ServiceCollection();
+services.AddSingleton<VeterinaryClinic>();
+services.AddSingleton<Zoo>();
+var provider = services.BuildServiceProvider();
+var zoo = provider.GetRequiredService<Zoo>(); 
+```
